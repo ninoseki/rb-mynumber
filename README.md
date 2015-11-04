@@ -21,19 +21,14 @@ Or install it yourself as:
 ```ruby
 require 'mynumber'
 # 個人番号の要件を満たしている場合
-MyNumber.individual_number?('895980423139')
-# => true
+MyNumber.individual_number?('895980423139') # => true
 # 個人番号の要件を満たしていない場合
-MyNumber.individual_number?('895980423138') => true
-# => false
+MyNumber.individual_number?('895980423138') # => false
 
 # 法人番号の要件を満たしている場合
-MyNumber.corporate_number?('2010001163289')
-# => true
+MyNumber.corporate_number?('2010001163289') #=> true
 # 法人番号の要件を満たしていない場合
-MyNumber.corporate_number?('2010001163285')
-#=> false
-
+MyNumber.corporate_number?('2010001163285') #=> false
 ```
 
 ## Contributing
