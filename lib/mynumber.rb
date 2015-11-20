@@ -1,6 +1,10 @@
 require "mynumber/version"
 
+# マイナンバー(個人番号/法人番号)のバリデーター
 class MyNumber
+  # 法人番号の要件を満たしているかチェックする
+  # @param n [#to_s] any object that responds to `#to_s`
+  # @return [true, false] whether it is valid or not
   def self.corporate_number?(n)
     return false unless n.to_s =~ /^\d{13}$/
 
@@ -15,6 +19,9 @@ class MyNumber
     check_digit == (9 - sum % 9)
   end
 
+  # 個人番号の要件を満たしているかチェックする
+  # @param n [#to_s] any object that responds to `#to_s`
+  # @return [true, false] whether it is valid or not
   def self.individual_number?(n)
     return false unless n.to_s =~ /^\d{12}$/
 
